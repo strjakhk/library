@@ -1,0 +1,183 @@
+:root{
+    --main-bg-color-first: #1E130C;
+    --main-bg-color-last: #2c2521;
+    --color-1: #c7c6c5;
+    --svg-fill-color-1: #d3d2d2;
+    --book-card-bg: #ffe0cd;
+}
+
+*,
+*::before,
+*::after{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+button{
+    border: none;
+    background: none;
+    outline: none;
+    cursor: pointer;
+}
+
+html{
+    font-size: clamp(
+        0.65rem,
+        0.75rem + 0.75vw,
+        1.3rem
+    );
+}
+
+body{
+    font-family: 'Nothing You Could Do', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+    display: grid;
+    grid-template-rows: 25vh minmax(65vh, 1fr) 10vh;
+    grid-template-columns: 100%;
+}
+
+header{
+    background-image: linear-gradient(
+        to bottom, 
+        transparent 0%,
+        var(--main-bg-color-first) 100%),
+        url('../img/library.jpg'
+    );
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: grid;
+
+}
+
+main h1{
+    z-index: 1;
+
+    align-self: center;
+    justify-self: center;
+    
+    font-size: 2rem;
+    letter-spacing: 0.1rem;
+
+    color: var(--book-card-bg);
+    text-shadow: 0px 0px 2px var(--main-bg-color-last);
+    font-weight: 100;
+}
+
+main{
+    background: -webkit-linear-gradient(
+        to bottom,
+        var(--main-bg-color-first),
+        var(--main-bg-color-last)
+    );
+        background: linear-gradient(
+        to bottom,
+        var(--main-bg-color-first),
+        var(--main-bg-color-last)
+    );
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 20px;
+}
+
+footer{
+    background: var(--main-bg-color-last);
+}
+
+.gallery{
+    width: 80%;
+    height: auto;
+
+    padding: 24px 2rem;
+    box-shadow: 0px -2px 2px -3px var(--book-card-bg);
+
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 266px);
+    grid-auto-rows: 400px;
+    gap: 2rem;
+}
+
+.book{
+    position: relative;
+
+    padding: 10px 0.8rem;
+
+    display: grid;
+    grid-template-areas:
+        ". . read "
+        ". title ."
+        ". author ."
+        ". . ."
+        ". . pages"
+        ". . ."
+        "del . .";
+    
+    align-items: center;
+    justify-content: center;
+    
+
+    color: var(--main-bg-color-first);
+}
+
+.book path{
+    stroke: var(--main-bg-color-first)
+}
+
+.book::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    
+    border-radius: 10px;
+    background-color: var(--main-bg-color-first);
+    box-shadow: 0px 0px 10px 4px var(--main-bg-color-first);
+
+    z-index: 0;
+}
+
+.book .cover-bg{
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    z-index: 1;
+}
+
+.book-title{
+    z-index: 2;
+    grid-area: title;
+
+    font-size: 1.4rem;
+    font-weight: 100;
+    line-height: 40px;
+}
+.book-author{
+    z-index: 2;
+    grid-area: author;
+
+    font-size: 1rem;
+}
+.book-pages{
+    z-index: 2;
+    grid-area: pages;
+
+    font-size: 0.8rem;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+.book-delete{
+    z-index: 2;
+    grid-area: del;
+}
+.book-read-mark{
+    z-index: 2;
+    grid-area: read;
+
+    justify-self: right;
+}
