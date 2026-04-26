@@ -73,7 +73,7 @@ function listLibrary(){
 
 function getBookIndexByTitle(title){
     return myLibrary.findIndex(book => {
-            return book.title === bookTitle;
+            return book.title === title;
             });
 }
 
