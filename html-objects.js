@@ -51,7 +51,7 @@ HtmlAddBookForm.prototype.createElement = function(){
     this.addBookForm.innerHTML = `            
             <form name="addBookForm">
                 <button type="button" class="btn-close-form">x</button>
-                <img src="/img/paper.jpg" alt="paper">
+                <img src="./img/paper.jpg" alt="paper">
                 <div class="title">
                     <label for="book-title">Title:</label>
                     <input type="text" name="title" id="book-title" required>
