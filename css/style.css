@@ -279,3 +279,12 @@ footer{
     font-size: 2rem;
     text-decoration: underline;
 }
+
+.btn-close-form{
+    position: absolute;
+    z-index: 2;
+    top: 0px;
+    right: 10px;
+    font-family: inherit;
+    font-size: 2em;
+}

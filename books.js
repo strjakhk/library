@@ -105,6 +105,14 @@ document.body.addEventListener("click", e => {
     }
 });
 
+// close add book form button
+document.body.addEventListener("click", e => {
+    if (e.target.closest(".btn-close-form")){
+        const formElement = e.target.closest(".form-add-book");
+        formElement.remove();
+    }
+})
+
 // submit event handler for all forms
 document.body.addEventListener("submit", e => {
     e.preventDefault();
