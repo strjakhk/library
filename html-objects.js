@@ -52,15 +52,15 @@ HtmlAddBookForm.prototype.createElement = function(){
             <form name="addBookForm">
                 <img src="/img/paper.jpg" alt="paper">
                 <div class="title">
-                    <label for="book-title">Title</label>
+                    <label for="book-title">Title:</label>
                     <input type="text" name="title" id="book-title" required>
                 </div>
                 <div class="author">
-                    <label for="book-author">Author</label>
+                    <label for="book-author">Author:</label>
                     <input type="text" name="author" id="book-author" required>
                 </div>
                 <div class="pages">
-                    <label for="book-pages">Pages</label>
+                    <label for="book-pages">Pages:</label>
                     <input type="tel" name="pages" id="book-pages" required>
                 </div>
                 <div class="form-add-button">
