@@ -37,7 +37,6 @@ function addBookToLibrary(title, author, pages, isRead = false){
 
 addBookToLibrary("Pride and Prejudice", "Jane Austen", 123);
 addBookToLibrary("The Lord of the Rings", "J.R.R. Tolkien", 223);
-addBookToLibrary("Harry Potter 1", "J.K. Rowling", 323);
 
 function listLibrary(){
     // get reference to gallery
